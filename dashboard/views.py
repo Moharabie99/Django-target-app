@@ -47,6 +47,7 @@ def upload(request):
         merged_df.to_excel(output_path, index=False)
 
         return redirect(request, 'dashboard/upload_success.html')
+        return render(request, 'dashboard/upload_success.html')
 
     return render(request, 'dashboard/upload.html')
 
