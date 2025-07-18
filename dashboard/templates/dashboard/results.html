@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results - Mondelez Target</title>
+    <link rel="stylesheet" href="{% static 'dashboard/css/results.css' %}">
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'dashboard/img/mondelez_logo.png' %}" alt="Mondelez Logo" class="logo">
+
+        <h1>Monthly Target Fulfillment</h1>
+
+        <!-- ⬆️ BUTTONS MOVED HERE -->
+        <div class="buttons" style="margin-bottom: 20px;">
+            <a href="{% url 'home_page' %}" class="btn secondary">⬅ Home Page</a>
+            <a href="{% url 'download_report' 'processed_target.xlsx' %}" class="btn primary" download>
+                ⬇ Download Result Excel
+            </a>
+        </div>
+
+        <div class="table-container">
+            {{ table|safe }}
+        </div>
+    </div>
+</body>
+</html>

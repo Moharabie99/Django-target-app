@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Successful</title>
+    <link rel="stylesheet" href="{% static 'dashboard/css/mondelez_base.css' %}">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, #f0f0f5, #e6e0ec);
+            color: #333;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 70%;
+            transform: translate(-50%, -50%);
+            opacity: 0.07;
+            z-index: 0;
+        }
+
+        .navbar {
+            padding: 20px 40px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 100px auto;
+            text-align: center;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            z-index: 2;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #5c2d91;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            z-index: 2;
+        }
+
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #4a148c;
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background-color: #6a1b9a;
+}
+    </style>
+</head>
+<body>
+    <img src="{% static 'dashboard/images/mondelez_logo.png' %}" alt="Logo" class="background-logo">
+
+    <div class="content">
+        <h2>Upload Successful!</h2>
+         <div class="buttons" style="margin-bottom: 24px;">
+            <a href="{% url 'home_page' %}" class="btn primary">✔️Done!</a>
+    </div>
+
+    <footer>
+        &copy; 2025 Eman Elsiddig Bebo. All rights reserved.
+    </footer>
+</body>
+</html>
