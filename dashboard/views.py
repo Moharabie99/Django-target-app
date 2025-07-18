@@ -45,8 +45,7 @@ def upload(request):
         # Save to Excel
         output_path = os.path.join(UPLOAD_DIR, 'processed_target.xlsx')
         merged_df.to_excel(output_path, index=False)
-
-        return redirect(request, 'dashboard/upload_success.html')
+        
         return render(request, 'dashboard/upload_success.html')
 
     return render(request, 'dashboard/upload.html')
