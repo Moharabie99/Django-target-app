@@ -57,7 +57,7 @@ MIDDLEWARE = [
 
 
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'mondelez_target.urls'
 
 TEMPLATES = [
     {
