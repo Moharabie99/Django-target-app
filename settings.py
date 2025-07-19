@@ -27,9 +27,9 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 SECRET_KEY = 'django-insecure-w4anv&8aq2@e*-i()#q$#a4-=34l9+^r=)de@m#u!(6fafc1q+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = 'mohamrabie.pythonanywhere.com' ]
+ALLOWED_HOSTS = ['mohamrabie.pythonanywhere.com' ]
 
 
 # Application definition
@@ -118,6 +118,7 @@ USE_I18N = True
 
 USE_TZ = True
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
